@@ -1,13 +1,236 @@
+/*------------------- global styles ---------------------------*/
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Lato';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: rgb(204, 204, 204);
+}
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: rgba(153, 153, 153, 0.5);
+  border-radius: 3px;
+}
+
+/*------------------- some custom styles ---------------------------*/
+
+.logo {
+  width: 1rem;
+}
+
+.upload-button {
+  border-radius: 3px;
+  padding: 2px 16px;
+  margin-right: 16px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fz-07 {
+  font-size: 0.7rem;
+}
+
+.email-radio[id='first-email']:checked ~ .dot {
+  display: block !important;
+}
+
+.email-radio[id='second-email']:checked ~ .dot {
+  display: block !important;
+}
+
+/*------------------- input-file-wrapper styles  ---------------------------*/
+
+.input-file-wrapper {
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  padding: 4px 8px;
+}
+
+.input-file-wrapper .inputfile {
+  display: none;
+}
+
+.input-file-wrapper .placeholder {
+  color: #c5c5c5;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input-file-wrapper .placeholder.with-file {
+  color: initial;
+  overflow: hidden;
+}
+
+.input-file-wrapper label {
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+/*------------------- react-select styles ---------------------------*/
+
+.css-1okebmr-indicatorSeparator {
+  display: none;
+}
+
+.css-1g48xl4-IndicatorsContainer {
+  cursor: pointer;
+}
+
+.css-1hwfws3 {
+  padding: 1px 8px;
+}
+
+/*------------------- colors and background styles ---------------------------*/
+
+.bg-main {
+  background-color: #008cf2 !important;
+}
+
+.color-main {
+  color: #008cf2;
+}
+
+.color-show-more {
+  color: #4e7ea8;
+}
+
+.color-facebook {
+  color: #3d598f;
+}
+
+.color-linkedin {
+  color: #1a749c;
+}
+
+.color-resume {
+  color: #3d7fb9;
+}
+
+/*------------------- popup styles ---------------------------*/
+
+.popup-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.popup {
+  width: 60%;
+  font-size: 1rem;
+}
+
+.popup *:focus {
+  outline: none;
+}
+
+.popup ul {
+  list-style-type: circle;
+}
+
+.popup input,
+.popup textarea {
+  padding: 0.5rem;
+  box-shadow: 0px 2px 5px #00000029;
+}
+
+.popup input::placeholder,
+.popup textarea::placeholder {
+  color: #c5c5c5;
+}
+
+.popup input:focus {
+  outline: #547ea4 solid 1px;
+}
+
+.popup button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.popup input,
+.popup textarea {
+  border-radius: 4px;
+  border: 1px solid rgb(204, 204, 204);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popup label {
+  width: 2.5rem;
+  height: 2rem;
+}
+
+.popup .dot {
+  border-radius: 100%;
+  border: 6px solid;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1.5rem;
+}
+
+.popup .dot.active {
+  border-color: #008cf2;
+}
+
+.popup .dot.inactive {
+  border-color: #c5c5c5;
+}
+
+.popup .trash {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  box-shadow: 0px 5px 7px 0px #cccccc;
+  position: relative;
+  margin-left: 1rem;
+  color: #008cf2;
+}
+
+.popup .plus {
+  border-radius: 100%;
+  border: 1px solid #008cf2;
+  display: flex;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  justify-content: center;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+}
+
+.popup .header {
+  background-color: #008cf2;
+}
+
+.popup .footer {
+  border-top: 1px solid rgb(204, 204, 204);
+}
+
+/*------------------- media styles ---------------------------*/
+
+@media screen and (max-width: 680px) {
+  html {
+    font-size: 12px;
+  }
 }

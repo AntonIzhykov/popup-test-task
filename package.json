@@ -1,11 +1,16 @@
 {
-  "name": "test-popup",
+  "name": "popup-test-task",
+  "author": "Anton Izhykov a.k.a. LanzzLophophora",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "formik": "^1.5.8",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "react-select": "^3.0.4",
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -15,6 +20,11 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "semi": true
   },
   "browserslist": {
     "production": [
@@ -27,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
   }
 }
